@@ -1,0 +1,26 @@
+html{
+  scroll-behavior: smooth;
+  
+}
+
+
+
+
+#name{
+  transition-duration: .5s;
+}
+.list_menu{
+  transition-duration: .5s;
+}
+.footer_links{
+  transition-duration: .5s;
+}
+
+
+#photo_personal{
+  box-shadow: 0px 0px 35px red;
+}
+
+#box_blue{
+  box-shadow: 0px 0px 45px #0C08B1;
+}
