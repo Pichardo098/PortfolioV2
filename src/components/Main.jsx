@@ -23,8 +23,11 @@ const Main = ({refProyects}) => {
               </section>
             </section>
             <section className='absolute bottom-[20px] z-0 -translate-x-1/4 md:-translate-x-[35%] lg:-translate-x-[80%]'>
-              <div id='photo_personal' className='rounded-full bg-[url("./bkg-section/zyro-image.png")] bg-cover bg-center  border-2 border-red-600'>
+              <div id='photo_personal' className='rounded-full relative  border-2 border-red-600'>
                 <img src="./bkg-section/elipse_solid_red.svg" alt="Imagen personal Jesus Antonio" />
+                <div >
+                  <img className="absolute bottom-0 rounded-full p-6 " src="./bkg-section/zyro-image.png" alt="Imagen personal Jesus Antonio" />
+                </div>
               </div>
 
             </section>
