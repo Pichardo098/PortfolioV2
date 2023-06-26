@@ -25,7 +25,7 @@ const Footer = () => {
     const BASE_URL =  "https://formsubmit.co/ajax/"
     const EMAIL = "jesuspir98@gmail.com"
 
-    axios.post(`${BASE_URL}${EMAIL}`, JSON.stringify(formData))
+    axios.post(`${BASE_URL}${EMAIL}`, formData)
       .then(()=> setShowModalSucces(!showModalSucces))
       .catch(()=> setShowModalErr(!showModalErr))
 
