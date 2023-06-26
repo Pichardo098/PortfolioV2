@@ -2,9 +2,9 @@ const Main = ({refProyects}) => {
   return (
     <main id="info_personal" className='relative  w-full h-[200vh] flex flex-col justify-between '>
         <article  id='about_me' className='h-full flex flex-col relative justify-center items-end  max-w-[1200px] mx-auto' >
-            <section className='w-[70%] z-10 grid gap-8 px-2 relative top-[-30px] min-[400px]:text-[20px] lg:w-[50%] lg:pr-10 '>
+            <section className='w-[70%] z-[1] grid gap-8 px-2 relative top-[-30px] min-[400px]:text-[20px] lg:w-[50%] lg:pr-10  '>
               
-              <h2 className='font-bold text-[30px] md:text-[40px]' >Hola!</h2>
+              <h2 className='font-bold text-[30px] md:text-[30px]' >Hola!</h2>
               <p className='text-[#c2c1c1] md:text-[30px] '>
               Actualmente me encuentro viviendo en Zaopoan, Jal. México, tengo 25 años.<br />
               Una de las metas que tengo es aprender varios lenguajes de programación, actualemente manejo JS, React, HTML, CSS.
@@ -33,12 +33,16 @@ const Main = ({refProyects}) => {
             </section>
         </article>
         <article ref={refProyects} id='proyects' className='h-full flex flex-col relative  items-center  justify-center max-w-[1200px] mx-auto'>
-          <section className='w-[80%] z-10 flex flex-col  gap-8 px-2 relative lg:flex-row lg:w-full  '>
+          <section className='w-[80%] z-[1] flex flex-col  gap-8 px-2 relative lg:flex-row lg:w-full  '>
             <h2 className='font-bold text-[20px] md:text-[30px]' >Mis últimos proyectos</h2>
-            <section className='w-full h-[400px] min-[390px]:h-[600px] min-[400px]:text-[20px] bg-white/30 rounded-xl p-4 overflow-scroll flex justify-center text-center md:text-[30px] md:h-[700px]'>
+            <section className='w-full h-[500px] max-[450px]:h-[450px] min-[400px]:text-[20px] bg-white/30 rounded-xl p-4 overflow-scroll flex justify-center text-center md:text-[25px] md:h-[700px]'>
               <section className='grid gap-4 ' >
               <div className='grid gap-1 lg:flex lg:items-center '>
-                <img className=' rounded-[45px] mx-auto lg:h-[500px] ' src="./proyects/rick_morty.png" alt="Página Web de Rick and Morty" />
+                <div className="max-[735px]:h-[300px] ">
+                <a href="https://rick-and-morty-api-jp.netlify.app/" target="_blank" className="max-[735px]:h-[300px] md:h-[500px]  ">
+                  <img className={` ${"img_Proyects"} rounded-[20px]  overflow-hidden mx-auto lg:w-[550px] h-full object-contain `} src="./proyects/rick_morty.png" alt="Página Web de Rick and Morty" />
+                </a>
+                </div>
                 <section>
                   <h3 className='font-bold' >Rick And Morty</h3>
                   <p className='text-[#c2c1c1]'>
@@ -48,7 +52,11 @@ const Main = ({refProyects}) => {
               </div>
               <hr />
               <div className='grid gap-1 lg:flex lg:items-center'>
-                <img className='mx-auto  lg:h-[500px] ' src="./proyects/app_clima.png" alt="Página web del clima" />
+                <div className="max-[735px]:h-[300px]">
+                <a href="https://weatherapp-jp.netlify.app/" target="_blank" className="max-[735px]:h-[300px] md:h-[500px]">
+                  <img className=' mx-auto  lg:w-[700px] h-full  ' src="./proyects/app_clima.png" alt="Página web del clima" />
+                </a>
+                </div>
                 <section>
                   <h3 className='font-bold' >App del Clima</h3>
                   <p className='text-[#c2c1c1]' >
@@ -58,7 +66,11 @@ const Main = ({refProyects}) => {
               </div>
               <hr />
               <div className='grid gap-1  lg:flex lg:items-center'>
-                <img className=' rounded-[10px] mx-auto lg:row-span-2 lg:h-[500px]' src="./proyects/pokedex1.png" alt="Página web de Pokemon" />
+                <div className="max-[735px]:h-[300px]">
+                <a href="https://apipokemon-v2-jp.netlify.app/pokedex" target="_blank" className="max-[735px]:h-[300px] md:h-[500px]">
+                  <img className='  rounded-[10px] mx-auto lg:row-span-2 lg:w-[700px] h-full object-contain' src="./proyects/pokedex1.png" alt="Página web de Pokemon" />
+                </a>
+                </div>
                 <section>
                   <h3 className='font-bold' >Pokédex</h3>
                   <p className='text-[#c2c1c1]' >

@@ -41,22 +41,28 @@ function App() {
 
 
   return (
-    <div id='body' className={`min-h-screen  text-white bg-black `}>
-      <header className={`fixed z-40 top-0  ${getMenu ? "bg-[#181818]" : "bg-black"} h-[84px] md:h-[122px] w-full flex justify-center lg:bg-black`}>
+    <div id='body' className={`min-h-screen  text-white bg-black relative `}>
+      <header className={`fixed z-10 top-0  ${getMenu ? "bg-[#181818]" : "bg-black"} h-[84px] md:h-[122px] w-full flex justify-center lg:bg-black`}>
         <section className={`absolute flex top-[84px] w-full h-screen justify-center bg-[#181818] md:top-[122px]  transition-all ${getMenu ? "translate-x-0" : "translate-x-full invisible"}   lg:translate-x-0 lg:invisible lg:w-full lg:min-h-screen lg:block `}>
             <section className='flex flex-col justify-around text-center w-[60%] text-[35px] font-semibold transition-colors md:w-[70%] md:text-[40px] '>
 
 
               <section className='text-start grid gap-5 md:h-[30%] lg:fixed lg:visible lg:bottom-[60%] lg:right-[-200px] lg:rotate-90 lg:flex lg:text-[30px] lg:h-auto  '>
-                <div style={{color: principalColor }} className={` list_menu  `} ><a href="#info_personal">Acerca de mi</a></div>
-                <div style={{color: principalColor }} className={` list_menu  `} ><a href="#proyects">Proyectos</a></div>
-                <div style={{color: principalColor }} className={` list_menu  `} ><a href="#footer">Contacto</a></div>
+                <div style={{color: principalColor }} className={` list_menu hover:scale-105  `} ><a href="#info_personal">Acerca de mi</a></div>
+                <div style={{color: principalColor }} className={` list_menu hover:scale-105 `} ><a href="#proyects">Proyectos</a></div>
+                <div style={{color: principalColor }} className={` list_menu hover:scale-105 `} ><a href="#footer">Contacto</a></div>
               </section>
 
               <section className='flex justify-around lg:fixed  lg:visible lg:bottom-[155px] lg:right-[20px] lg:gap-4'>
-                <div><a href="#" ><i style={{color: principalColor }} className={`bx bxl-linkedin-square  element_menu footer_links`}></i></a></div>
-                <div><a href="#"><i style={{color: principalColor }} className={`bx bxl-github  element_menu footer_links`}></i></a></div>
-                <div><a href="#"><i style={{color: principalColor }} className={`bx bxl-instagram-alt  element_menu footer_links`}></i></a></div>
+                <div className='relative'>
+                  <a href="/cv/jesusPichardo_cv.pdf" download>
+                    <i style={{color: principalColor }} className='bx bxs-file-pdf hover:scale-105'></i>
+                  </a>
+                  <span id='downloadCv' style={{color: principalColor }} className='absolute text-[15px] left-1/2 -translate-x-1/2 -top-5 -translate-y-1/2 bg-[#181818] py-[3px] px-2 rounded-md select-none'>Descargar CV</span>
+                </div>
+                <div><a href="https://www.linkedin.com/in/jes%C3%BAs-antonio-pichardo-r%C3%ADos-464981275/" target='_blank' ><i style={{color: principalColor }} className={`bx bxl-linkedin-square  element_menu footer_links hover:scale-110`}></i></a></div>
+                <div><a href="https://github.com/Pichardo098" target='_blank' ><i style={{color: principalColor }} className={`bx bxl-github  element_menu footer_links hover:scale-110`}></i></a></div>
+                <div><a href="https://www.instagram.com/antoniopich98/" target='_blank'><i style={{color: principalColor }} className={`bx bxl-instagram-alt  element_menu footer_links hover:scale-110`}></i></a></div>
               </section>
             </section>
         </section>
@@ -66,11 +72,11 @@ function App() {
               <img className='md:w-[200px]' src="./images/logo.svg" alt="Logo Academlo" />
             </a>
           </div>
-          <h1 onClick={handleMenu} style={{color: principalColor}} className={`min-[400px]:text-[25px] cursor-pointer px-4 font-bold  text-[20px] hover:drop-shadow-2xl md:text-[30px] md:p-4 lg:cursor-auto`} id='name'>
+          <h1 onClick={handleMenu} style={{color: principalColor}} className={`min-[400px]:text-[25px] cursor-pointer px-4 font-bold  text-[20px] hover:drop-shadow-2xl md:text-[30px] md:p-4 hover:scale-110 lg:hover:scale-100 lg:cursor-auto`} id='name'>
             Jesús<br/>Pichardo
           </h1>
           
-          <section className='fixed bottom-[45px] inline-block w-[220px]  md:right-[45px] font-bold text-xl invisible md:visible lg:ring-offset-inherit lg:left-[45px] lg:text-start lg:text-[25px]  '>
+          <section className='fixed bottom-[45px] inline-block w-[220px]  md:right-[45px] font-bold text-xl invisible md:visible lg:ring-offset-inherit lg:left-[45px] lg:text-start lg:text-[25px] select-none '>
             <h2 className='inline-block h-auto' >Web Designer</h2> <br />
             <p className='inline-block h-auto'>Back <span style={{color: principalColor }}>End</span> </p>
           </section>
