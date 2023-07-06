@@ -24,7 +24,7 @@ function App() {
       if(proyectsY > 0){
         setPrincipalColor("#FF2B51")
       }else if(proyectsY == proyectsH ){
-        setPrincipalColor("#0C08B1")
+        setPrincipalColor("#8D8BFF")
       }else if(1 > proyectsH  ){
         setPrincipalColor("#10FFF1")
       }
@@ -54,6 +54,7 @@ function App() {
               </section>
 
               <section className='flex justify-around lg:fixed  lg:visible lg:bottom-[155px] lg:right-[20px] lg:gap-4'>
+                <section className='flex lg:gap-4 gap-3 justify-around'>
                 <div className='relative'>
                   <a href="/cv/jesusPichardo_cv.pdf" download>
                     <i style={{color: principalColor }} className='bx bxs-file-pdf hover:scale-105'></i>
@@ -63,6 +64,8 @@ function App() {
                 <div><a href="https://www.linkedin.com/in/jes%C3%BAs-antonio-pichardo-r%C3%ADos-464981275/" target='_blank' ><i style={{color: principalColor }} className={`bx bxl-linkedin-square  element_menu footer_links hover:scale-110`}></i></a></div>
                 <div><a href="https://github.com/Pichardo098" target='_blank' ><i style={{color: principalColor }} className={`bx bxl-github  element_menu footer_links hover:scale-110`}></i></a></div>
                 <div><a href="https://www.instagram.com/antoniopich98/" target='_blank'><i style={{color: principalColor }} className={`bx bxl-instagram-alt  element_menu footer_links hover:scale-110`}></i></a></div>
+                </section>
+                {/* <a class="fab fa-whatsapp" href="https://wa.me/523313569305/?text=Hola,%20quiero%20saber%20más%20sobre%20tus%20servicios" target="_blank">WP</a> */}
               </section>
             </section>
         </section>

@@ -1,4 +1,37 @@
+import { useState } from "react"
+
+const stylesImages = {
+  0 :"-ml-[0%]",
+  1 :"-ml-[100%]",
+  2 :"-ml-[200%]",
+  3 :"-ml-[300%]"
+}
+
 const Main = ({refProyects}) => {
+  const [imageToShow, setImageToShow] = useState(0)
+
+
+  const handleClickNextProyect = () => {
+    if(imageToShow < 3){
+      setImageToShow(imageToShow + 1)
+    }else if(imageToShow == 3){
+      setImageToShow(0)
+    }
+  }
+  const handleClickPreviousProyect = () => {
+    if(imageToShow > 0){
+      setImageToShow(imageToShow - 1)
+    }else if(imageToShow == 0){
+      setImageToShow(2)
+    }
+  }
+
+
+  const handleClickViewProyect =  (value) => {
+        setImageToShow(value)
+  }
+
+
   return (
     <main id="info_personal" className='relative  w-full h-[200vh] flex flex-col justify-between '>
         <article  id='about_me' className='h-full flex flex-col relative justify-center items-end  max-w-[1200px] mx-auto' >
@@ -33,52 +66,93 @@ const Main = ({refProyects}) => {
             </section>
         </article>
         <article ref={refProyects} id='proyects' className='h-full flex flex-col relative  items-center  justify-center max-w-[1200px] mx-auto'>
-          <section className='w-[80%] z-[1] flex flex-col  gap-8 px-2 relative lg:flex-row lg:w-full  '>
-            <h2 className='font-bold text-[20px] md:text-[30px]' >Mis últimos proyectos</h2>
-            <section className='w-full h-[500px] max-[450px]:h-[450px] min-[400px]:text-[20px] bg-white/30 rounded-xl p-4 overflow-scroll flex justify-center text-center md:text-[25px] md:h-[700px]'>
-              <section className='grid gap-4 ' >
-              <div className='grid gap-1 lg:flex lg:items-center '>
-                <div className="max-[735px]:h-[300px] ">
-                <a href="https://rick-and-morty-api-jp.netlify.app/" target="_blank" className="max-[735px]:h-[300px] md:h-[500px]  ">
-                  <img className={` ${"img_Proyects"} rounded-[20px]  overflow-hidden mx-auto lg:w-[550px] h-full object-contain `} src="./proyects/rick_morty.png" alt="Página Web de Rick and Morty" />
-                </a>
+          <section className='w-[100%] sm:w-[80%] z-[1] flex flex-col  gap-8 px-2 relative lg:flex-row lg:w-full  '>
+            <h2 className='font-bold text-[20px] md:text-[30px] ' >Mis últimos proyectos</h2>
+            <section className="relative overflow-hidden max-sm:w-[300px]   lg:w-[500px] ">
+              {/* Contenedor de proyectos */}
+              <section className={`w-[400%] flex transition-all ${stylesImages[imageToShow]}  max-[380px]:h-[400px] max-sm:h-[550px] sm:h-[550px]  lg:h-[600px] `}>
+
+                <div className='proyects grid gap-1 justify-center lg:items-center w-[calc(100%_/_4)] bg-white/40 rounded-lg py-2 text-center overflow-auto sm:grid-cols-2  items-center sm:px-[3%] '>
+                  <div className="h-[300px] ">
+                    <img className="rounded-[20px]  overflow-hidden mx-auto  h-full object-contain " src="./proyects/rick_morty.png" alt="Página Web de Rick and Morty" />
+                  </div>
+                  <section className="flex flex-col justify-start items-center gap-3">
+                    <button className="duration-1000 grid justify-center items-center bg-gradient-to-r from-gray-600 to-[#10FFF1]/70 p-2 rounded-lg hover:from-gray-300 hover:to-[#10FFF1]/50 hover:text-black/40 font-semibold transition-colors">
+                      <a href="https://rick-and-morty-api-jp.netlify.app/" target="_blank">
+                        Visitar el sitio <i className='bx bxs-right-arrow'></i> 
+                      </a>
+                    </button>
+                    <h3 className='font-bold' >Rick And Morty</h3>
+                    <p className='text-[#c2c1c1] '>
+                      Este proyecto se hizo con la finalidad de poder obtener las diferentes locaciones del univero de Rick And Morty; se utilizó React, versionamiento con Git y Github, Axios y para el diseño se utilizó Tailwind.
+                    </p>
+                  </section>
                 </div>
-                <section>
-                  <h3 className='font-bold' >Rick And Morty</h3>
-                  <p className='text-[#c2c1c1]'>
-                    Este proyecto se hizo con la finalidad de poder obtener las diferentes locaciones del univero de Rick And Morty; se utilizó React, versionamiento con Git y Github, Axios y para el diseño se utilizó Tailwind.
-                  </p>
-                </section>
-              </div>
-              <hr />
-              <div className='grid gap-1 lg:flex lg:items-center'>
-                <div className="max-[735px]:h-[300px]">
-                <a href="https://weatherapp-jp.netlify.app/" target="_blank" className="max-[735px]:h-[300px] md:h-[500px]">
-                  <img className=' mx-auto  lg:w-[700px] h-full  ' src="./proyects/app_clima.png" alt="Página web del clima" />
-                </a>
+
+                <div className='proyects grid gap-1 justify-center lg:items-center w-[calc(100%_/_4)] bg-white/40 rounded-lg py-2 text-center overflow-auto sm:grid-cols-2 items-center sm:px-[3%]'>
+                  <div className="h-[300px] ">
+                    <img className="rounded-[20px]  overflow-hidden mx-auto  h-full object-contain " src="./proyects/app_clima.png" alt="Página web del clima" />
+                  </div>
+                  <section className="flex flex-col justify-start items-center gap-3">
+                    <button className="duration-1000 grid justify-center items-center bg-gradient-to-r from-gray-600 to-[#10FFF1]/70 p-2 rounded-lg hover:from-gray-300 hover:to-[#10FFF1]/50 hover:text-black/40 font-semibold transition-colors">
+                      <a href="https://weatherapp-jp.netlify.app/" target="_blank">
+                        Visitar el sitio <i className='bx bxs-right-arrow'></i> 
+                      </a>
+                    </button>
+                    <h3 className='font-bold' >Weather App</h3>
+                    <p className='text-[#c2c1c1]'>
+                      Este proyecto tiene como finalidad el poder obtener el clima en tu ciudad y otras regiones del mundo, así como otros parámetros en tiempo exacto utilizando la API de OpenWeather, se utilizó React, versionamiento de Git y Gituhub, Axios y para el diseño Tailwind.
+                    </p>
+                  </section>
                 </div>
-                <section>
-                  <h3 className='font-bold' >App del Clima</h3>
-                  <p className='text-[#c2c1c1]' >
-                    Este proyecto tiene como finalidad el poder obtener el clima en tu ciudad y otras regiones del mundo, así como otros parámetros en tiempo exacto utilizando la API de OpenWeather, se utilizó React, versionamiento de Git y Gituhub, Axios y para el diseño Tailwind.
-                  </p>
-                </section>
-              </div>
-              <hr />
-              <div className='grid gap-1  lg:flex lg:items-center'>
-                <div className="max-[735px]:h-[300px]">
-                <a href="https://apipokemon-v2-jp.netlify.app/pokedex" target="_blank" className="max-[735px]:h-[300px] md:h-[500px]">
-                  <img className='  rounded-[10px] mx-auto lg:row-span-2 lg:w-[700px] h-full object-contain' src="./proyects/pokedex1.png" alt="Página web de Pokemon" />
-                </a>
+
+                <div className='proyects grid gap-1 justify-center lg:items-center w-[calc(100%_/_4)] bg-white/40 rounded-lg py-2 text-center overflow-auto sm:grid-cols-2 items-center sm:px-[3%]'>
+                  <div className="h-[300px] ">
+                    <img className="rounded-[20px]  overflow-hidden mx-auto  h-full object-contain " src="./proyects/pokedex1.png" alt="Página web de Pokemon"/>
+                  </div>
+                  <section className="flex flex-col justify-start items-center gap-3">
+                    <button className="duration-1000 grid justify-center items-center bg-gradient-to-r from-gray-600 to-[#10FFF1]/70 p-2 rounded-lg hover:from-gray-300 hover:to-[#10FFF1]/50 hover:text-black/40 font-semibold transition-colors">
+                      <a href="https://apipokemon-v2-jp.netlify.app/pokedex" target="_blank">
+                        Visitar el sitio <i className='bx bxs-right-arrow'></i> 
+                      </a>
+                    </button>
+                    <h3 className='font-bold' >Pokédex</h3>
+                    <p className='text-[#c2c1c1]'>
+                      Este proyecto tiene la función de poder visualizar todos los pokemones que existen, así como buscar únicamente el de tú agrado y poder obtener más información acerca de ese Pokemon en específico, se utilizó React, Axios, versionamiento de Git y Github y para el diseño Tailwind.
+                    </p>
+                  </section>
                 </div>
-                <section>
-                  <h3 className='font-bold' >Pokédex</h3>
-                  <p className='text-[#c2c1c1]' >
-                    Este proyecto tiene la función de poder visualizar todos los pokemones que existen, así como buscar únicamente el de tú agrado y poder obtener más información acerca de ese Pokemon en específico, se utilizó React, Axios, versionamiento de Git y Github y para el diseño Tailwind.
-                  </p>
-                </section>
-              </div>
+
+                <div className='proyects grid gap-1 justify-center lg:items-center w-[calc(100%_/_4)] bg-white/40 rounded-lg py-2 text-center overflow-auto sm:grid-cols-2 items-center sm:px-[3%]'>
+                  <div className="h-[300px] ">
+                    <img className="rounded-[20px]  overflow-hidden mx-auto  h-full object-contain " src="./proyects/rick_morty.png" alt="Página Web de Rick and Morty" />
+                  </div>
+                  <section className="flex flex-col justify-start items-center gap-3">
+                    <button className="duration-1000 grid justify-center items-center bg-gradient-to-r from-gray-600 to-[#10FFF1]/70 p-2 rounded-lg hover:from-gray-300 hover:to-[#10FFF1]/50 hover:text-black/40 font-semibold transition-colors">
+                      <a href="https://rick-and-morty-api-jp.netlify.app/" target="_blank">
+                        Visitar el sitio <i className='bx bxs-right-arrow'></i> 
+                      </a>
+                    </button>
+                    <h3 className='font-bold' >Rick And Morty</h3>
+                    <p className='text-[#c2c1c1]'>
+                      Este proyecto se hizo con la finalidad de poder obtener las diferentes locaciones del univero de Rick And Morty; se utilizó React, versionamiento con Git y Github, Axios y para el diseño se utilizó Tailwind.
+                    </p>
+                  </section>
+                </div>
+
+                
               </section>
+
+            <button onClick={handleClickPreviousProyect} className="absolute top-[35%] sm:top-1/2 left-2  -translate-y-1/2 bg-[#10FFF1]/50 h-10 text-black text-[25px] hover:bg-[#10FFF1] aspect-square rounded-full my-auto "><i className='bx bx-chevron-left'></i></button> 
+            <button onClick={handleClickNextProyect} className="absolute top-[35%] sm:top-1/2 right-2 -translate-y-1/2 bg-[#10FFF1]/50 h-10 text-black text-[25px] hover:bg-[#10FFF1] aspect-square rounded-full my-auto "><i className='bx bx-chevron-right'></i></button>
+            
+            <section className={`relative flex justify-center gap-10 h-auto  mt-5 transition-all`}>
+              <button onClick={() => handleClickViewProyect(0)} className={`h-5 aspect-square ${imageToShow == 0 && "bg-[#10FFF1]" } rounded-full border-2 border-gray-600`}></button>
+              <button onClick={() => handleClickViewProyect(1)} className={`h-5 aspect-square ${imageToShow == 1 && "bg-[#10FFF1]" } rounded-full border-2 border-gray-600`}></button>
+              <button onClick={() => handleClickViewProyect(2)} className={`h-5 aspect-square ${imageToShow == 2 && "bg-[#10FFF1]" } rounded-full border-2 border-gray-600`}></button>
+              <button onClick={() => handleClickViewProyect(3)} className={`h-5 aspect-square ${imageToShow == 3 && "bg-[#10FFF1]" } rounded-full border-2 border-gray-600`}></button>
+
+            </section>
             </section>
           </section>
           <section className='absolute bottom-[20px] -translate-x-1/4 md:-translate-x-[35%] lg:-translate-x-[60%] lg:bottom-[20%]'>

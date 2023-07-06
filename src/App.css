@@ -3,6 +3,65 @@ html{
   
 }
 
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+  width:20px;
+  background-color: black;
+
+}
+
+body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
+  display: none;
+} 
+
+body::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #a1a1a1;
+  border-radius: 20px;
+  
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
+
+
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.proyects::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.proyects::-webkit-scrollbar:vertical {
+  width:5px;
+}
+
+.proyects::-webkit-scrollbar-button:increment,.proyects::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.proyects::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.proyects::-webkit-scrollbar-thumb {
+  background-color: #1bebdd;
+  border-radius: 20px;
+  border: none;
+}
+
+.proyects::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
+
 #name{
   transition-duration: .5s;
 }
