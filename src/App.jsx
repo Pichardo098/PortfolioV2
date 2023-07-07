@@ -85,7 +85,7 @@ function App() {
               </section>
 
               <section className='flex justify-around lg:fixed  lg:visible lg:bottom-[155px] lg:right-[20px] lg:gap-4 '>
-                <section className='flex lg:gap-4 gap-3 justify-around'>
+                <section className='flex lg:gap-4 gap-3 justify-between'>
                 <div className='relative'>
                   <a href="/cv/jesusPichardo_cv.pdf" download>
                     <i style={{color: principalColor }} className='bx bxs-file-pdf hover:scale-105'></i>

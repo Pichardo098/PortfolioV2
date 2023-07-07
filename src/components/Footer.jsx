@@ -123,7 +123,7 @@ const Footer = () => {
           </section>
 
         </section>
-        <section className='absolute bottom-[20px] z-0 -translate-x-1/4  md:-translate-x-[35%] lg:-translate-x-full lg:bottom-[10%]'>
+        <section className='absolute bottom-[20px] z-0 -translate-x-1/4  md:-translate-x-[35%] lg:-translate-x-full lg:bottom-[10%] select-none'>
           <div id='box_blue' >
             <img className=' bg-[url("./bkg-section/cuadrado-blur.svg")] bg-cover ' src="./bkg-section/cuadrado-solid.svg" alt="Fondo de forma cuadrada color azul" />
           </div>
