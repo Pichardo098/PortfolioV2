@@ -111,3 +111,32 @@ body::-webkit-scrollbar {
     opacity: 1;
   }
 }
+
+.underline,
+.underline2{
+  border: none;
+  height: 1px;
+  max-width: 0;
+  background-color: #FF2B51;
+  padding: 0;
+}
+
+.btn_ref:hover ~  .underline{
+  max-width: 95px;
+  transition: all .5s ease-in-out;
+}
+.btn_ref2:hover ~  .underline2{
+  max-width: 170px;
+  transition: all .5s ease-in-out;
+}
+
+@media (min-width:800px ) {
+  .btn_ref:hover ~  .underline{
+    max-width: 120px;
+    transition: all .5s ease-in-out;
+  }
+  .btn_ref2:hover ~  .underline2{
+    max-width: 211px;
+    transition: all .5s ease-in-out;
+  }
+}
