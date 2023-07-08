@@ -44,7 +44,7 @@ const Main = () => {
 
               </p>
               <section className="flex flex-col  ">
-                <a href="#" className="max-w-max btn_ref md:text-[30px]">Ver proyectos 
+                <a href="#proyects" className="max-w-max btn_ref md:text-[30px]">Ver proyectos 
                 </a>
                 <hr  className="underline "/>
                 <a href="#about_me" className="max-w-max btn_ref2 md:text-[30px]">Saber más acerca de mí 
