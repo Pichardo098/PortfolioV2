@@ -87,7 +87,7 @@ function App() {
               <section className='flex justify-around lg:fixed  lg:visible lg:bottom-[155px] lg:right-[20px] lg:gap-4 '>
                 <section className='flex lg:gap-4 gap-3 justify-between'>
                 <div className='relative'>
-                  <a href="/cv/jesusPichardo_cv.pdf" download>
+                  <a href="/cv/jesus_pichardo_CV.pdf" download>
                     <i style={{color: principalColor }} className='bx bxs-file-pdf hover:scale-105'></i>
                   </a>
                   <span id='downloadCv' style={{color: principalColor }} className='absolute text-[15px] left-1/2 -translate-x-1/2 -top-5 -translate-y-1/2 bg-[#181818] py-[3px] px-2 rounded-md select-none'>Descargar CV</span>
@@ -96,7 +96,6 @@ function App() {
                 <div><a href="https://github.com/Pichardo098" target='_blank' ><i style={{color: principalColor }} className={`bx bxl-github  element_menu footer_links hover:scale-110`}></i></a></div>
                 <div><a href="https://www.instagram.com/antoniopich98/" target='_blank'><i style={{color: principalColor }} className={`bx bxl-instagram-alt  element_menu footer_links hover:scale-110`}></i></a></div>
                 </section>
-                {/* <a class="fab fa-whatsapp" href="https://wa.me/523313569305/?text=Hola,%20quiero%20saber%20más%20sobre%20tus%20servicios" target="_blank">WP</a> */}
               </section>
             </section>
         </section>
