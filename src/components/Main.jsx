@@ -63,11 +63,11 @@ const Main = () => {
                 </ul>
               </section>
             </section>
-            <section className='absolute bottom-[20px] z-0 -translate-x-1/4 md:-translate-x-[35%] lg:-translate-x-[80%] select-none'>
+            <section className='absolute bottom-[20px] z-0 -translate-x-1/4 md:-translate-x-[35%] lg:-translate-x-[80%] select-none lg:h-[600px]'>
               <div id='photo_personal' className='rounded-full relative  border-2 border-red-600'>
                 <img src="./bkg-section/elipse_solid_red.svg" alt="Imagen personal Jesus Antonio" />
-                <div >
-                  <img className="absolute bottom-0 rounded-full p-6 " src="./bkg-section/zyro-image.png" alt="Imagen personal Jesus Antonio" />
+                <div className="overflow-hidden">
+                  <img className="absolute bottom-0 rounded-full p-7 lg:p-10 overflow-hidden" src="./bkg-section/img_personal3.png" alt="Imagen personal Jesus Antonio" />
                 </div>
               </div>
 
